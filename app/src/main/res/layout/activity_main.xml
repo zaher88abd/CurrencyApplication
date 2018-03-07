@@ -36,12 +36,13 @@
         android:text="@string/btn_search" />
 
     <ListView
+        android:id="@+id/lvCurrencies"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/btnSearch"
         android:layout_centerHorizontal="true"
-        android:layout_margin="35sp"
-        android:layout_marginBottom="35sp"
+        android:layout_marginTop="35sp"
+        android:layout_marginBottom="5sp"
         android:layout_marginEnd="2sp"
         android:layout_marginStart="2sp"
         android:divider="@null"

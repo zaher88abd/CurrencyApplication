@@ -2,6 +2,7 @@ package ca.zaher.m.lab6;
 
 import android.content.Context;
 
+import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
 
@@ -16,7 +17,7 @@ public class RequestQueueSingleton {
     private static Context context;
 
     private RequestQueueSingleton(Context context) {
-        context = context;
+        this.context = context;
         mRequestQueue = getRequestQueue();
     }
 
@@ -32,5 +33,9 @@ public class RequestQueueSingleton {
             mRequestQueue = Volley.newRequestQueue(context.getApplicationContext());
         }
         return mRequestQueue;
+    }
+
+    public <T> void addToRequestQueue(Request<T> req) {
+        getRequestQueue().add(req);
     }
 }
